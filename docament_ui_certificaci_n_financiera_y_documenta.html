@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>DocamentUI | Certificación Financiera y Documental</title>
+ <meta name="description" content="Servicios de certificación documental y documentación financiera en Montería. Certificado de identidad empresarial y Cámara de Comercio.">
+ <style>
+ /* --- ESTILOS GENERALES (CSS) --- */
+:root {
+ --primary-color: #003366; /* Azul Corporativo Oscuro */
+ --secondary-color: #0056b3; /* Azul Corporativo */
+ --accent-color: #f0f4f8; /* Gris muy claro */
+ --text-color: #333333;
+ --white: #ffffff;
+ --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ }
+
+ * {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ }
+
+ body {
+ font-family: var(--font-main);
+ color: var(--text-color);
+ background-color: var(--white);
+ line-height: 1.6;
+ }
+
+ /* --- HEADER & NAVEGACIÓN --- */
+ header {
+ background-color: var(--primary-color);
+ color: var(--white);
+ padding: 1rem 2rem;
+ position: sticky;
+ top: 0;
+ z-index: 1000;
+ box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ }
+
+.logo {
+ font-size: 1.5rem;
+ font-weight: bold;
+ text-decoration: none;
+ color: var(--white);
+ display: flex;
+ align-items: center;
+ gap: 10px;
+ }
+
+.logo span {
+ color: #4da6ff; /* Azul claro para resaltar la U */
+ }
+
+ nav ul {
+ list-style: none;
+ display: flex;
+ gap: 20px;
+ }
+
+ nav a {
+ color: var(--white);
+ text-decoration: none;
+ font-weight: 500;
+ transition: color 0.3s;
+ }
+
+ nav a:hover {
+ color: #4da6ff;
+ }
+
+.btn-contact {
+ background-color: var(--secondary-color);
+ padding: 0.5rem 1.2rem;
+ border-radius: 5px;
+ text-decoration: none;
+ color: var(--white);
+ border: none;
+ cursor: pointer;
+ font-weight: bold;
+ transition: background 0.3s;
+ }
+
+.btn-contact:hover {
+ background-color: #004494;
+ }
+
+ /* --- HERO SECTION --- */
+.hero {
+ background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+ color: var(--white);
+ padding: 4rem 2rem;
+ text-align: center;
+ }
+
+.hero h1 {
+ font-size: 2.5rem;
+ margin-bottom: 1rem;
+ }
+
+.hero p {
+ font-size: 1.2rem;
+ max-width: 600px;
+ margin: 0 auto 2rem auto;
+ opacity: 0.9;
+ }
+
+ /* --- SECCIONES GENERALES --- */
+ section {
+ padding: 4rem 2rem;
+ max-width: 1200px;
+ margin: 0 auto;
+ }
+
+.section-title {
+ text-align: center;
+ font-size: 2rem;
+ color: var(--primary-color);
+ margin-bottom: 3rem;
+ position: relative;
+ }
+
+.section-title::after {
+ content: '';
+ display: block;
+ width: 60px;
+ height: 3px;
+ background-color: var(--secondary-color);
+ margin: 10px auto;
+ }
+
+ /* --- ABOUT SECTION --- */
+.about-content {
+ display: flex;
+ flex-wrap: wrap;
+ align-items: center;
+ gap: 2rem;
+ }
+
+.about-text {
+ flex: 1;
+ min-width: 300px;
+ }
+
+.about-text h3 {
+ margin-bottom: 1rem;
+ color: var(--secondary-color);
+ }
+
+.about-image {
+ flex: 1;
+ min-width: 300px;
+ background-color: var(--accent-color);
+ border-radius: 8px;
+ padding: 2rem;
+ text-align: center;
+ box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+ }
+
+ /* --- SERVICES SECTION --- */
+.services-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+ gap: 2rem;
+ }
+
+.service-card {
+ background-color: var(--white);
+ border: 1px solid #e0e0e0;
+ border-radius: 8px;
+ padding: 2rem;
+ text-align: center;
+ transition: transform 0.3s, box-shadow 0.3s;
+ }
+
+.service-card:hover {
+ transform: translateY(-5px);
+ box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+ border-color: var(--secondary-color);
+ }
+
+.icon-box {
+ font-size: 2.5rem;
+ margin-bottom: 1rem;
+ color: var(--secondary-color);
+ }
+
+ /* --- LOCATION SECTION --- */
+.location-section {
+ background-color: var(--accent-color);
+ text-align: center;
+ }
+
+.location-box {
+ background-color: var(--white);
+ padding: 3rem;
+ border-radius: 8px;
+ box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+ display: inline-block;
+ width: 100%;
+ max-width: 800px;
+ }
+
+.address-highlight {
+ font-size: 1.5rem;
+ font-weight: bold;
+ color: var(--primary-color);
+ margin: 1.5rem 0;
+ display: block;
+ }
+
+ /* --- FOOTER --- */
+ footer {
+ background-color: var(--primary-color);
+ color: var(--white);
+ text-align: center;
+ padding: 2rem;
+ margin-top: auto;
+ }
+
+ footer p {
+ opacity: 0.7;
+ font-size: 0.9rem;
+ }
+
+ /* --- RESPONSIVE --- */
+ @media (max-width: 768px) {
+.hero h1 { font-size: 2rem; }
+ nav ul { display: none; } /* Simplificado para móvil */
+.btn-contact { margin-top: 10px; display: block; width: 100%; }
+.location-box { padding: 1.5rem; }
+ }
+ </style>
+</head>
+<body>
+
+ <!-- Header -->
+ <header>
+ <a href="#" class="logo">
+ <!-- Icono SVG simple de documento -->
+ <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+ Docament<span>UI</span>
+ </a>
+ <nav>
+ <ul>
+ <li><a href="#inicio">Inicio</a></li>
+ <li><a href="#nosotros">Nosotros</a></li>
+ <li><a href="#servicios">Servicios</a></li>
+ <li><a href="#ubicacion">Ubicación</a></li>
+ </ul>
+ </nav>
+ <a href="#contacto" class="btn-contact">Contactar Ahora</a>
+ </header>
+
+ <!-- Hero Section -->
+ <section id="inicio" class="hero">
+ <h1>Expertos en Certificación Documental y Financiera</h1>
+ <p>Garantizamos la autenticidad de tus documentos financieros con la Cámara de Comercio de Montería. Rapidez, seguridad y máxima credibilidad.</p>
+ </section>
+
+ <!-- About Section -->
+ <section id="nosotros">
+ <h2 class="section-title">Sobre DocamentUI</h2>
+ <div class="about-content">
+ <div class="about-text">
+ <h3>Entidad Confiable</h3>
+ <p>DocamentUI es una empresa líder en Montería dedicada a agilizar los procesos de legalización y certificación documental. Nos especializamos en asegurar que tus documentos financieros cumplan con los estándares más altos de la Cámara de Comercio.</p>
+ <br>
+ <p>Nuestro objetivo es brindarte una experiencia transparente, donde cada paso del proceso es monitoreado y verificado con precisión para garantizar la aceptación inmediata de tus documentos en cualquier entidad bancaria o institucional.</p>
+ </div>
+ <div class="about-image">
+ <!-- Placeholder visual -->
+ <svg width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="#003366" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+ <h4>Registros Certificados</h4>
+ <p>Alta seguridad en la gestión de archivos.</p>
+ </div>
+ </div>
+ </section>
+
+ <!-- Services Section -->
+ <section id="servicios">
+ <h2 class="section-title">Nuestros Servicios</h2>
+ <div class="services-grid">
+ <div class="service-card">
+ <div class="icon-box">
+ <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+ </div>
+ <h3>Certificados de Identidad</h3>
+ <p>Emisión de certificados oficiales de empresas y representante legal.</p>
+ </div>
+ <div class="service-card">
+ <div class="icon-box">
+ <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
+ </div>
+ <h3>Facturación y NIT</h3>
+ <p>Procesos de facturación, actualización de datos tributarios y creación de NITs.</p>
+ </div>
+ <div class="service-card">
+ <div class="icon-box">
+ <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+ </div>
+ <h3>Validación Bancaria</h3>
+ <p>Documentación verificada para operaciones de crédito y préstamos.</p>
+ </div>
+ </div>
+ </section>
+
+ <!-- Location Section -->
+ <section id="ubicacion" class="location-section">
+ <div class="location-box">
+ <h2>Visítanos</h2>
+ <p>Estamos ubicados en el centro financiero para una atención directa.</p>
+ 
+ <div class="address-highlight">
+ Calle 20 Carrera 3c #23<br>
+ Montería, Córdoba, Colombia
+ </div>
+ 
+ <p><strong>Horario:</strong> Lunes a Viernes, 8:00 AM - 5:00 PM</p>
+ <br>
+ <a href="#" class="btn-contact">Ver en Google Maps</a>
+ </div>
+ </section>
+
+ <!-- Footer -->
+ <footer>
+ <p>&copy; 2026 DocamentUI - Todos los derechos reservados.</p>
+ <p>Certificado por Cámara de Comercio de Montería.</p>
+ </footer>
+
+</body>
+</html>
